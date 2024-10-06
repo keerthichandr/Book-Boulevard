@@ -1,0 +1,24 @@
+.bookshelf-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .empty-bookshelf {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .book-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

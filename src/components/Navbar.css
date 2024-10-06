@@ -1,0 +1,112 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' preserveAspectRatio='none'%3E%3Cpath fill='%23333' d='M1000 25.3c-63.8 0-300.3 26.1-549.8 25.3-164-0.5-312.7-24.4-450.2-24.6V100h1000V25.3z'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.navbar-brand a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-nav li {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.navbar-nav li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff9966;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav li a:hover::before,
+.navbar-nav li a.active::before {
+  transform: scaleX(1);
+}
+
+.navbar-nav li a:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar-nav li {
+    text-align: left;
+  }
+}

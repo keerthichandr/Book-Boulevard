@@ -2,6 +2,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 16px;
+    margin-top:2%;
   }
   
   .empty-bookshelf {
@@ -21,4 +22,47 @@
       grid-template-columns: 1fr;
     }
   }
-  
+ 
+  /* Main container styles */
+.myBookList-container {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #bcbbbb, #ffffff);
+    padding: 20px;
+}
+
+/* Error message styles */
+.error-message {
+  background-color: rgb(236 156 156 / 80%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px #ececec;
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0; /* Invisible at start */
+      transform: translateY(-20px); /* Move up */
+  }
+  100% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move back to original position */
+  }
+}
+
+/* Specific styling for the error message about books not in list */
+.error-message h3 {
+  margin: 0; /* Remove default margin */
+}

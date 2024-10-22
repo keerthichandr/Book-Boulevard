@@ -11,5 +11,4 @@ const LoadingIndicator = ({ progress }) => {
     </div>
   );
 };
-
 export default LoadingIndicator;

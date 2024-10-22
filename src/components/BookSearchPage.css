@@ -1,3 +1,30 @@
+.recommendations {
+  background: #ffffff;  
+  border-radius: 10px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+  padding: 20px;  
+  margin: 15px;  
+  position: relative; 
+  overflow: hidden; 
+}
+.save-btn {
+  background: #4CAF50;  
+  color: #fff;  
+  border: none;  
+  border-radius: 5px; 
+  padding: 10px 15px;  
+  font-size: 14px;  
+  cursor: pointer;  
+  position: absolute;  
+  top: 10px; 
+  right: 10px;  
+  transition: background 0.3s;  
+}
+
+.save-btn:hover {
+  background: #45a049; /* Darker green on hover */
+}
+
 .book-search-page {
     max-width: 800px;
     margin: 0 auto;
@@ -28,3 +55,51 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .book-detail{
+      margin: 10px 0;  
+      font-size: 18px; 
+  }
+  .loader-image{
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+  }
+ 
+.book-save-error {
+    background: #f3aeae;
+    padding: 1%;
+    width: 48%;
+    border-radius: 9px;
+    color: #000000;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+
+.book-save-success {
+  background: #bef9e2;
+  padding: 1%;
+  width: 48%;
+  border-radius: 9px;
+  color: #000000;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+ 

@@ -1,0 +1,27 @@
+.shimmer-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between shimmer items */
+    width: 100%;
+  }
+  
+  .shimmer-item {
+    width: 600px;
+    height: 100px; /* Height of each shimmer block */
+    background: linear-gradient(to right, #e6f3ff 0%, #e0e8ff 20%, #d9e5f6 40%, #ffffff 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 4px;
+    margin-inline: auto;
+    margin-top: 10px;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  

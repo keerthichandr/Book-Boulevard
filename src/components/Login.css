@@ -92,6 +92,10 @@ body {
     position: fixed;  
     bottom: 0; 
     width: 100%;  
+    display: flex;
+    justify-content: space-around;
+    
+    
 } 
 .error-body {
     color: red;
@@ -101,5 +105,13 @@ body {
     background-color: rgb(246 222 205);
     font-weight: bold;
     font-size: 0.9rem;
+  }
+  .footer-credentials{
+    font-size: 14px;
+    color: #ffffffae;
+
+  }
+  .footer-content{
+    margin-left: 20px;
   }
   

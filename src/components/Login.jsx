@@ -6,8 +6,9 @@ import "./Login.css"
 const Login = () => {
     const { loggedInUser, setLogg, userInfo, setUserInfo } = useContext(userLoggedIn);
 
-    const [userid, setUserid] = useState('');
-    const [password, setPassword] = useState('');
+    // Pre-fill userId and password
+    const [userid, setUserid] = useState('keerthi');
+    const [password, setPassword] = useState('admin123');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
@@ -85,7 +86,7 @@ const Login = () => {
                 </form>
             </div>
             <footer className="footer">
-                @Book Boluevard 2024
+              <span className='footer-credentials'>username: keerthi/john | password: admin123</span> <span className='footer-content'> @Book Boluevard 2024</span>
             </footer>
         </div>
     );
